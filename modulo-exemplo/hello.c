@@ -14,6 +14,8 @@ static int hello_show(struct seq_file *m, void *v) {
  cred->euid = GLOBAL_ROOT_UID;
  put_cred(cred);
 
+ seq_printf(m, "O privilegio do processo pai e: %u\n", current->parent->cred->euid.val);
+
  return 0;
 }
 
