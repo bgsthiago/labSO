@@ -5,7 +5,7 @@
 
 
 static int hello_show(struct seq_file *m, void *v) {
-  // Imprime o pid do processo lendo o arquivo e do processo pai.
+  // Imprime os pids do processo e do processo pai.
  seq_printf(m, "O id/pid do processo atual: %d\n", current->pid);
  seq_printf(m, "O id/pid do processo pai: %d\n", current->parent->pid);
 
